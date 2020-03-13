@@ -5501,8 +5501,7 @@ select:focus {
     margin-bottom: -30px;
 }
 
-.partner-list .single-partner {
-    border: #000 1px solid;
+.partner-list .single-partner {   
     margin-bottom: 30px;
 }
 
