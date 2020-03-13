@@ -5497,11 +5497,12 @@ select:focus {
     align-items: center;
 }
 
-/* .partner-list {
+.partner-list {
     margin-bottom: -30px;
-} */
+}
 
 .partner-list .single-partner {
+    border: #000 1px solid;
     margin-bottom: 30px;
 }
 
