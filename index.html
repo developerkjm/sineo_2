@@ -251,12 +251,12 @@
                 <div class="modal-content">
                     <span class="seventh-close">&times;</span>
                     <h3>회원가입</h3>
-                    <p>사전 가입을 원하시면 이메일 주소을 입력하시면 사전가입이 됩니다.</p>
+                    <!-- <p>사전 가입을 원하시면 이메일 주소을 입력하시면 사전가입이 됩니다.</p> -->
 
                     <div class="email-octopus-form-row">
-                        <label for="field_0" style="color: #182848">Name</label>
-                        <input id="field_0" name="embedded_form_subscription[field_0]" type="email"
-                               placeholder="">
+                        <label for="field_0" style="color: #182848"></label>
+                        <input id="field_0" name="embedded_form_subscription[field_0]" type="text"
+                               placeholder="Name">
                     </div>
 
 
@@ -267,10 +267,24 @@
                               action="https://emailoctopus.com/lists/f0e47811-5ac4-11e8-a3c9-06b79b628af2/members/embedded/1.1/add"
                               class="email-octopus-form">
                             <div class="email-octopus-form-row">
-                                <label for="field_0" style="color: #182848">Email</label>
+                                <label for="field_0" style="color: #182848"></label>
                                 <input id="field_0" name="embedded_form_subscription[field_0]" type="email"
-                                       placeholder="">
+                                       placeholder="Email">
                             </div>
+
+                            <div class="email-octopus-form-row">
+                                <label for="field_0" style="color: #182848"></label>
+                                <input id="field_0" name="embedded_form_subscription[field_0]" type="password"
+                                       placeholder="Password">
+                            </div>
+
+                            <div class="email-octopus-form-row">
+                                <label for="field_0" style="color: #182848"></label>
+                                <input id="field_0" name="embedded_form_subscription[field_0]" type="password"
+                                       placeholder="Retype Password">
+                            </div>
+                            
+
                             <div class="email-octopus-form-row-consent">
                                 <input type="checkbox" id="consent" name="consent">
                                 <label for="consent" style="color: #182848">주간뉴스,이메일 및 행사정보을 이메일로 받고싶으면 체크박스에 체크을 해주세요.</label>
