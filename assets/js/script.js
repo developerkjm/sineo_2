@@ -527,6 +527,10 @@ signinBtn.onclick = function () {
     signin.style.display = "block";
 }
 
+writeBtn.onclick = function () {
+    write.style.display = "block";
+}
+
 span7.onclick = function () {
     signup.style.display = "none";
 }
