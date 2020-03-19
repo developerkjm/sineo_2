@@ -526,10 +526,10 @@ signupBtn.onclick = function () {
 signinBtn.onclick = function () {
     signin.style.display = "block";
 }
-
-writeBtn.onclick = function () {
-    write.style.display = "block";
-}
+/*이 버튼 온클릭만 넣으면 닫기 버튼이 작동이 안됨*/
+// writeBtn.onclick = function () {
+//     write.style.display = "block";
+// }
 
 span7.onclick = function () {
     signup.style.display = "none";
