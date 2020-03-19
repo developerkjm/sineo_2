@@ -5135,7 +5135,7 @@ select:focus {
     height: 3px;
     width: 65px;
     background-image: -webkit- linear-gradient(to right, #2b56f5 0%, #46bdf4 100%);
-    background-image: linear-gradient(to right, #2b56f5 0%, #46bdf4 100%);
+    
     transition: all .5s ease;
 }
 
@@ -7792,6 +7792,11 @@ select:focus {
     text-align: center;
     padding-top: 20px;
 }
+.modal-content h5 {
+    color: #415EA0;
+    text-align: center;
+    padding-top: 20px;
+}
 
 #signup-modal .modal-content {
     text-align: center;
@@ -7799,6 +7804,10 @@ select:focus {
 
 #signin-modal .modal-content {
     text-align: center;
+}
+
+#write-modal .modal-content {
+    text-align: center;    
 }
 
 #join-whitelist-modal .modal-content {
@@ -8120,3 +8129,147 @@ select:focus {
         left: 0%;
     }
 }
+
+/*================================*/
+/* Board 추가  */
+/*================================*/
+.sixteen.columns {
+	width: 100%;
+	padding-left: 20px;
+	box-sizing: border-box;
+	float: left;
+	margin: 0;
+}
+
+/* ------------------------------------------------------------------- */
+/* Tables + Stacktable (responsive tables plug-in)
+---------------------------------------------------------------------- */
+
+table.manage-table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+table.manage-table th {
+	background-color: #f6f6f6 !important;
+	text-align: left;
+	padding: 18px 20px 18px 40px;
+	color: #333;
+	vertical-align: top;
+	font-size: 16px;
+	font-weight: 600;
+	position: relative;
+	z-index: 9;
+	line-height: 22px;
+	margin-left: 33px !important;
+}
+
+table.manage-table th i { position: absolute; left: 17px; top: 21px; }
+
+table.manage-table a.button {
+	padding: 7px 14px;
+	line-height: 26px;
+}
+
+/* table.manage-table tr:nth-child(2n+1) { background-color: #f70303; } */
+
+table.manage-table th:first-child { width: 32%; padding-left: 55px; }
+table.manage-table th:first-child i { left: 35px; }
+table.manage-table.resumes th:first-child { width: auto; }
+
+table.manage-table.resumes td:first-child,
+table.manage-table td:first-child { padding-left: 35px; line-height: 25px; }
+
+
+/* Border Hover */
+table.manage-table tr td {
+	padding: 40px 20px;
+	vertical-align: middle;
+	border: 1px solid #e0e0e0;
+	border-left: none;
+	border-right: none;
+}
+
+table.manage-table tr:hover td { 
+	border: 1px double rgba(80, 80, 80,0.7);
+	border-left: none;
+	border-right: none;
+	background-color: rgba(80, 80, 80,0.05);
+}
+
+/* Resumes Table Styles */
+table.manage-table.resumes td { padding: 30px 20px; } 
+
+table td.title a {
+	font-weight: 600;
+	color: #7ab9ff;
+}
+
+table td.title a:hover { color: #505050; }
+
+span.pending {
+	color: #53b427;
+	font-weight: 500;
+}
+
+table.manage-table td.centered { text-align: center; }
+
+table.manage-table td.action a { display: block; color: #7ab9ff; line-height: 20px; padding: 3px 0; position: relative; margin-left: 21px; }
+table.manage-table td.action a.delete i { left: -20px; }
+table.manage-table td.action a i { position: absolute; left: -21px; top: 5px; }
+
+table.manage-table td.action a.delete:hover { color: #f02929; }
+
+table.manage-table td.action a:hover { color: #505050; }
+
+.keywords,
+.alert-name { width: 18% }
+
+/* write 버튼 디자인*/
+.write-btn {
+    color: #182848 !important;
+}
+
+.write-btn:hover {
+    color: #fff !important;
+    background: transparent !important;
+}
+
+.write-btn:before {
+    background-image: none !important;
+    border: 2px solid white;
+}
+
+.write-btn:after {
+    background: #fff !important;
+    border-radius: 0 !important;
+}
+
+
+
+
+
+/*  write modal  */
+textarea.WYSIWYG { min-height: 300px; }
+
+.writeForm {
+	margin: 0;
+	padding: 0;
+    white-space: nowrap;
+    width: 200px;
+}
+
+.search-field input[type="text"] {
+	margin: 0;
+	padding: 0;
+	height: 47px;
+	outline: 0;
+	border: 0 !important;
+	background: transparent !important;
+	color: #808080;
+	line-height: normal;
+	font-weight: 500;
+}
+
+.search-field input[type="text"] { color: #808080 !important; }
