@@ -503,15 +503,11 @@ var modal5 = document.getElementById('fifth-modal');
 var modal6 = document.getElementById('sixth-modal');
 var signup = document.getElementById('signup-modal');
 var signin = document.getElementById('signin-modal');
-var write = document.getElementById('write-modal');
-
 var joinWhitelistModal = document.getElementById('join-whitelist-modal');
 
 // Get the button that opens the modal
 var signupBtn = document.getElementById('signupBtn');
 var signinBtn = document.getElementById('signinBtn');
-var writeBtn = document.getElementById('writeBtn');
-
 
 // Get the <span> element that closes the modal
 var span7 = document.getElementsByClassName("seventh-close")[0];
@@ -526,10 +522,6 @@ signupBtn.onclick = function () {
 signinBtn.onclick = function () {
     signin.style.display = "block";
 }
-/*이 버튼 온클릭만 넣으면 닫기 버튼이 작동이 안됨*/
-// writeBtn.onclick = function () {
-//     write.style.display = "block";
-// }
 
 span7.onclick = function () {
     signup.style.display = "none";
@@ -566,9 +558,6 @@ window.onclick = function (event) {
     }
     if (event.target == signin) {
         signin.style.display = "none";
-    }
-    if (event.target == write) {
-        write.style.display = "none";
     }
     if (event.target == joinWhitelistModal) {
         joinWhitelistModal.style.display = "none";

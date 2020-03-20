@@ -249,11 +249,12 @@
                 <!-- .row  -->
             </div>
             <!-- .banner-content  -->
-            <!--signup_modal-->
             <div id="signup-modal" class="modal">
                 <div class="modal-content">
                     <span class="seventh-close">&times;</span>
-                    <h3>회원가입</h3>                  
+                    <h3>회원가입</h3>
+                    <!-- <p>사전 가입을 원하시면 이메일 주소을 입력하시면 사전가입이 됩니다.</p> -->
+
                     <div class="email-octopus-form-wrapper">
                         <p class="email-octopus-success-message" style="color: #182848;font-size: 25px;"></p>
                         <p class="email-octopus-error-message" style="color: #FF0000;font-size: 25px;"></p>
@@ -295,7 +296,8 @@
                                 <input type="checkbox" id="consent" name="consent">
                                 <label for="consent" style="color: #182848">주간뉴스,이메일 및 행사정보을 이메일로 받고싶으면 체크박스에 체크을 해주세요.</label>
                             </div>
-                            <div class="email-octopus-form-row-hp" aria-hidden="true">                                
+                            <div class="email-octopus-form-row-hp" aria-hidden="true">
+                                <!-- Do not remove this field, otherwise you risk bot sign-ups -->
                                 <input type="text" name="hpf0e47811-5ac4-11e8-a3c9-06b79b628af2"
                                        tabindex="-1"
                                        autocomplete="nope">
@@ -314,46 +316,67 @@
                         <h6 style="color: #182848;">Sign Up with Another Account:</h6>
                         <br />
                         <div class="otherAccount" style="text-align:center;">
-                            <button id="google-signup" class="btn brown darken-2 z-depth-0 otherAccountBtn"><i class="material-icons left"
-                                    style="margin: 2px 5px; pointer-events: none;"><img src="./assets/images/GoogleIcon.png" height="30px"
-                                        widht="30px" alt="GoogleIcon"></i>Google</button>
-                            <button id="facebook-signup" class="btn brown darken-2 z-depth-0 otherAccountBtn"><i class="material-icons left"
-                                    style="margin: 2px 5px; pointer-events: none;"><img src="./assets/images/FacebookIcon.png"
-                                        height="30px" widht="30px" alt="FacebookIcon"></i>Facebook</button>
+                            <button id="google-signup" 
+                                    class="btn brown darken-2 z-depth-0 otherAccountBtn"
+                                    style="background: #ffffff; color: #182848;">
+                                <i>                                    
+                                    <img src="./assets/images/GoogleIcon.png" height="10px" widht="10px" alt="GoogleIcon">
+                                </i>Google
+                            </button>
+                            <button id="facebook-signup" 
+                                    class="btn brown darken-2 z-depth-0 otherAccountBtn"
+                                    style="background: #ffffff; color: #182848;">
+                                <i>                                    
+                                    <img src="./assets/images/FacebookIcon.png" height="10px" widht="10px" alt="FacebookIcon">
+                                </i>Facebook
+                            </button>
                         </div>
                         <!--social signup 추가-->
+
                     </div>
                 </div>
             </div>
             <div id="signin-modal" class="modal">
-                <!-- <div id="login-modal" class="modal"> -->
-
-                <div class="modal-content">
-                    <span class="eight-close">&times;</span>
-                    <h3>로그인</h3>                    
-                    <br />
-                    <form id="login-form">
-                        <div class="input-field">
-                            <input type="email" id="login-email" class="validate" required />
-                            <label for="login-email">Email address</label>
+                <!-- <div id="modal-login" class="modal"> -->
+                    <div class="modal-content">
+                        <span class="eight-close">&times;</span>
+                        <h3>로그인</h3>
+                        <!-- <p>사전가입을 원하시면 이메일 주소을 입력하시면 사전가입이 됩니다.</p> -->
+                        <form id="login-form">
+                            <div class="input-field">
+                                <label for="login-email" style="color: #182848;">Email address</label>
+                                <input type="email" id="login-email" class="validate" required />
+                            </div>
+                            <div class="input-field">
+                                <label for="login-password"  style="color: #182848;">Your password</label>
+                                <input type="password" id="login-password" class="validate" autocomplete="off" required />
+                            </div>
+                            <div id="loginMsgDiv" style="color: crimson; margin: 10px 0px;"></div>
+                            <button type="submit"
+                                style="color: #fff;font-weight: 500;background: none; 
+                                        border-radius: 4px;background-color: #182848;border: 2px solid #182848;">
+                                Login</button>
+                        </form>
+    
+                            <h6 style="color: #182848;">Log In with Another Account:</h6>
+                            <br />
+                            <div class="otherAccount" style="text-align:center;">
+                                <button id="google-login" 
+                                        class="btn brown darken-2 z-depth-0 otherAccountBtn" 
+                                        style="background: #ffffff; color: #182848;">                            
+                                    <i>
+                                        <img src="./assets/images/GoogleIcon.png"  height="10px" widht="10px"  alt="GoogleIcon">
+                                    </i>Google                               
+                                </button>
+                                <button id="facebook-login" 
+                                        class="btn brown darken-2 z-depth-0 otherAccountBtn"
+                                        style="background: #ffffff; color: #182848;">                                                                
+                                    <i>
+                                        <img src="./assets/images/FacebookIcon.png" height="10px" widht="10px" alt="FacebookIcon">
+                                    </i>Facebook
+                                </button>
+                            </div>
                         </div>
-                        <div class="input-field">
-                            <input type="password" id="login-password" class="validate" autocomplete="off" required />
-                            <label for="login-password">Your password</label>
-                        </div>
-                        <div id="loginMsgDiv" style="color: crimson; margin: 10px 0px;"></div>
-                        <button class="btn brown darken-2 z-depth-0">Login</button>
-                        <!-- <button class="waves-effect waves-light btn"><i class="material-icons left"><img src="./assets/images/GoogleIcon.png" alt="GoogleIcon"></i>Google</button> -->
-                    </form>
-                    <h6>Log In with Another Account:</h6>
-                    <br />
-                    <div class="otherAccount" style="text-align:center;">
-                        <button id="google-login" class="btn brown darken-2 z-depth-0 otherAccountBtn"><i class="material-icons left"
-                                style="margin: 2px 5px; pointer-events: none;"><img src="./assets/images/GoogleIcon.png" height="30px"
-                                    widht="30px" alt="GoogleIcon"></i>Google</button>
-                        <button id="facebook-login" class="btn brown darken-2 z-depth-0 otherAccountBtn"><i class="material-icons left"
-                                style="margin: 2px 5px; pointer-events: none;"><img src="./assets/images/FacebookIcon.png"
-                                    height="30px" widht="30px" alt="FacebookIcon"></i>Facebook</button>
                     </div>
                 </div>
             </div>

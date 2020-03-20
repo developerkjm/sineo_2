@@ -1,7 +1,7 @@
 // Listen for auth status changes
 auth.onAuthStateChanged((user) => {
-    loginForm.reset();
-    signupForm.reset();
+    signin.reset();
+    signup.reset();
     if (user) {
         setupUI(user);
     } else {
@@ -53,22 +53,22 @@ logOut.addEventListener('click', (e) => {
 });
 
 // Login
-const loginForm = document.querySelector('#login-form');
-loginForm.addEventListener('submit', (e) => {
+const signin = document.querySelector('#login-form');
+signin.addEventListener('submit', (e) => {
     e.preventDefault();
     const errMsgDiv = document.querySelector('#loginMsgDiv')
 
     // Get user info
-    const email = loginForm['login-email'].value;
-    const password = loginForm['login-password'].value;
+    const email = signin['login-email'].value;
+    const password = signin['login-password'].value;
 
     // Logging in the user
     auth.signInWithEmailAndPassword(email, password).then((cred) => {
 
         // Close the login modal and reset it
-        const modal = document.querySelector('#modal-login');
+        const modal = document.querySelector('#signin-modal');
         M.Modal.getInstance(modal).close();
-        loginForm.reset();
+        signin.reset();
     }).catch((err) => {
         errMsgDiv.innerHTML = (err.message);
     });
@@ -84,11 +84,11 @@ const otherAccountSignup = (e) => {
         case "google-signup":
             var provider = new firebase.auth.GoogleAuthProvider();
             firebase.auth().signInWithPopup(provider).then(function (result) {
-                loginForm.reset();
+                signin.reset();
                 signupForm.reset();
-                const modal = document.querySelector('#modal-login');
+                const modal = document.querySelector('#signin-modal');
                 M.Modal.getInstance(modal).close();
-                loginForm.reset();
+                signin.reset();
             }).catch(function (error) {
                 alert(error.message);
             });
@@ -100,7 +100,7 @@ const otherAccountSignup = (e) => {
             firebase.auth().signInWithPopup(provider).then(function (result) {
                 loginForm.reset();
                 signupForm.reset();
-                const modal = document.querySelector('#modal-signup');
+                const modal = document.querySelector('#signup-modal');
                 M.Modal.getInstance(modal).close();
                 loginForm.reset();
             }).catch(function (error) {
